@@ -43,23 +43,26 @@ Matplotlib & Seaborn – Visualization
 Pandas & NumPy – Data processing
 
 ⚙️ How to Run
-1. Clone the Repository
+1. Clone the Repository:
 git clone https://github.com/yourusername/AI-SDN-Congestion-Avoidance.git
 cd AI-SDN-Congestion-Avoidance
 
-2. Set Up Python Environment
+2. Set Up Python Environment:
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-3. Train or Load the ML Model
+3. Train or Load the ML Model:
 Use model/isolationForest.ipynb to train the model on flow data
 Or load the pre-trained isolation_forest_model.joblib
 
-4. Run the Ryu Controller
+4. Run the Ryu Controller:
 ryu-manager ryu_app/simple_switch_13.py
 
-6. Launch Mininet Topology
+5. Launch Mininet Topology:
+sudo mn --custom topology/topo_2sw_2host.py --topo mytopo --controller=remote --mac --link tc
+
+6. Launch Mininet Topology:
 sudo mn --custom topology/topo_2sw_2host.py --topo mytopo --controller=remote --mac --link tc
 
 📊 Model Insights
